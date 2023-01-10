@@ -17,7 +17,7 @@ public class InteractionSystem : MonoBehaviour
         {
             if(InteractInput())
             {
-                if(!FindObjectOfType<DialogueManager>().dialogueActive)
+                if(!FindObjectOfType<DialogueManager>().animator.GetBool("ChatOpen"))
                 {
                     detectedObject.GetComponent<Interactable>().Interact();
                     Debug.Log("Interact");

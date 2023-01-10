@@ -10,19 +10,18 @@ public class DialogueManager : MonoBehaviour
     public TMPro.TMP_Text nameText;
     public TMPro.TMP_Text dialogueText;
     public Canvas dialogueCanvas;
+    public Animator animator;
 
     private Queue<string> sentences;
-    [HideInInspector] public bool dialogueActive;
     
     private void Start()
     {
         sentences = new Queue<string>();
-        dialogueCanvas.enabled = false;
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        dialogueActive= true;
+        animator.SetBool("ChatOpen", true);
         dialogueCanvas.enabled = true;
         nameText.text = dialogue.name;
 
@@ -42,16 +41,28 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        string sentence=sentences.Dequeue();
+        string sentence = sentences.Dequeue();
 
-        dialogueText.text = sentence;
+        //dialogueText.text = sentence;
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(sentence));
     }
 
     private void EndDialogue()
     {
-        dialogueActive= false;
+        animator.SetBool("ChatOpen", false);
         dialogueText.text = "";
-        dialogueCanvas.enabled = false;
         Debug.Log("Conversation end.");
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(0.1f);
+        }
+        
     }
 }
