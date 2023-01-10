@@ -17,9 +17,15 @@ public class InteractionSystem : MonoBehaviour
         {
             if(InteractInput())
             {
-                
-                detectedObject.GetComponent<Interactable>().Interact();
-                Debug.Log("Interact");
+                if(!FindObjectOfType<DialogueManager>().dialogueActive)
+                {
+                    detectedObject.GetComponent<Interactable>().Interact();
+                    Debug.Log("Interact");
+                }
+                else
+                {
+                    FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                }
             }
         }
     }

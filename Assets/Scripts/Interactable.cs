@@ -35,7 +35,5 @@ public class Interactable : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Here");
-        //collision.gameObject.GetComponentInParent<InteractionSystem>().detectedObject=collision.gameObject;
-        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }
