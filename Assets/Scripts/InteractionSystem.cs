@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InteractionSystem : MonoBehaviour
@@ -16,6 +17,8 @@ public class InteractionSystem : MonoBehaviour
         {
             if(InteractInput())
             {
+                
+                detectedObject.GetComponent<Interactable>().Interact();
                 Debug.Log("Interact");
             }
         }
@@ -28,12 +31,21 @@ public class InteractionSystem : MonoBehaviour
 
     bool Detect()
     {
-        return Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
         
-    }
-    public void Chat(GameObject character)
-    {
+        Collider2D obj = Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
 
+        if (obj == null)
+        {
+            detectedObject = null;
+            return false;
+        }
+        else
+        {
+            detectedObject = obj.gameObject;
+            return true;
+        }
+        
+        
     }
 
     private void OnDrawGizmosSelected()
