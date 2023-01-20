@@ -22,9 +22,9 @@ public class InteractionSystem : MonoBehaviour
                     detectedObject.GetComponent<Interactable>().Interact();
                     Debug.Log("Interact");
                 }
-                else
+                else if(!FindObjectOfType<DialogueManager>().optionsDisplayed)
                 {
-                    FindObjectOfType<DialogueManager>().DisplayNextSentence();
+                    FindObjectOfType<DialogueManager>().ProceedToNext();
                 }
             }
         }
