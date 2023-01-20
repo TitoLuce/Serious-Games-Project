@@ -16,7 +16,7 @@ public class Interactable : MonoBehaviour
         Karl,
         Ivori,
         Ming,
-        Kleon
+        Kleon,
     }
     public CharacterDialogue chosenDialogue;
 
@@ -64,8 +64,9 @@ public class Interactable : MonoBehaviour
                 Monologue fine = new Monologue(localName, "That's pog");
                 Monologue notFine = new Monologue(localName, "That's sadge :(");
 
-                Choices b = new Choices(localName, "How are you doing my little pog champ?", ChoiceList(Choice("Fine", fine), Choice("Not fine", notFine)));
-                Monologue a = new Monologue(localName, "Hello.", b);
+                Choices c = new Choices(localName, "How are you doing my little pog champ?", ChoiceList(Choice("Fine", fine), Choice("Not fine", notFine)));
+                Monologue b = new Monologue("Eyun", "Greetings, stone lover.", c);
+                Monologue a = new Monologue("Karl", "Rock and Stone Leaf Lover", b);
                 return a;
             case CharacterDialogue.Ivori:
                 return null;
