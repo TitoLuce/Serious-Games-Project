@@ -861,6 +861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   dialogue: {fileID: 0}
+  chosenDialogue: 1
 --- !u!1001 &2013315608
 PrefabInstance:
   m_ObjectHideFlags: 0

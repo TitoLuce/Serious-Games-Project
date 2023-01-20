@@ -17,26 +17,30 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Movement
-        if (Input.GetKey(KeyCode.D))
+        if (!FindObjectOfType<DialogueManager>().animator.GetBool("ChatOpen"))
         {
-            transform.Translate(new Vector2(movementSpeed * Time.deltaTime, 0));
-            interactionPoint.transform.position = new Vector2(transform.position.x + 0.6f, transform.position.y);
+            //Movement
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(new Vector2(movementSpeed * Time.deltaTime, 0));
+                interactionPoint.transform.position = new Vector2(transform.position.x + 0.6f, transform.position.y);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(new Vector2(-movementSpeed * Time.deltaTime, 0));
+                interactionPoint.transform.position = new Vector2(transform.position.x + -0.6f, transform.position.y);
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                interactionPoint.transform.position = new Vector2(transform.position.x, transform.position.y + 0.6f);
+                transform.Translate(new Vector2(0, movementSpeed * Time.deltaTime));
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(new Vector2(0, -movementSpeed * Time.deltaTime));
+                interactionPoint.transform.position = new Vector2(transform.position.x, transform.position.y - 0.6f);
+            }
         }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(new Vector2(-movementSpeed * Time.deltaTime, 0));
-            interactionPoint.transform.position = new Vector2(transform.position.x + -0.6f, transform.position.y);
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            interactionPoint.transform.position = new Vector2(transform.position.x, transform.position.y + 0.6f);
-            transform.Translate(new Vector2(0, movementSpeed * Time.deltaTime));
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(new Vector2(0, -movementSpeed * Time.deltaTime));
-            interactionPoint.transform.position = new Vector2(transform.position.x, transform.position.y - 0.6f);
-        }
+       
     }
 }
