@@ -16,7 +16,7 @@ public class Controls : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!FindObjectOfType<DialogueManager>().animator.GetBool("ChatOpen"))
         {
@@ -51,5 +51,10 @@ public class Controls : MonoBehaviour
             else { animator.SetBool("MovingDown", false); }
         }
        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collision");
     }
 }
