@@ -25,6 +25,9 @@ public class DialogueManager : MonoBehaviour
 
     public bool optionsDisplayed;
 
+    public Image characterImage;
+    public Sprite[] images;
+
     private void Start()
     {
         InitializePanel();
@@ -98,6 +101,7 @@ public class DialogueManager : MonoBehaviour
     {
         optionsBeenDisplayed = false;
         nameText.text = currentSection.GetSpeakerName();
+        characterImage.sprite = images[0];
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(currentSection.GetSpeechContents()));
