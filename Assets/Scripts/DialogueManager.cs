@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         InitializePanel();
+        characterImage.enabled = false;
     }
 
     private void InitializePanel()
@@ -101,7 +102,35 @@ public class DialogueManager : MonoBehaviour
     {
         optionsBeenDisplayed = false;
         nameText.text = currentSection.GetSpeakerName();
-        characterImage.sprite = images[0];
+        if (currentSection.GetSpeakerName() == "Eyun")
+        {
+            characterImage.enabled = true;
+            characterImage.sprite = images[0];
+        }
+        else if (currentSection.GetSpeakerName() == "Karl")
+        {
+            characterImage.enabled = true;
+            characterImage.sprite = images[1];
+        }
+        else if (currentSection.GetSpeakerName() == "Ming")
+        {
+            characterImage.enabled = true;
+            characterImage.sprite = images[2];
+        }
+        else if (currentSection.GetSpeakerName() == "Kleon")
+        {
+            characterImage.enabled = true;
+            characterImage.sprite = images[3];
+        }
+        else if (currentSection.GetSpeakerName() == "Ivori")
+        {
+            characterImage.enabled = true;
+            characterImage.sprite = images[4];
+        }
+        else 
+        { characterImage.sprite = null;
+            characterImage.enabled = false;
+        }
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(currentSection.GetSpeechContents()));
@@ -113,6 +142,7 @@ public class DialogueManager : MonoBehaviour
         nameText.text = "";
         contentsText.text = "";
         ClearAllOptions();
+        characterImage.enabled = false;
         Debug.Log("Conversation end.");
     }
 

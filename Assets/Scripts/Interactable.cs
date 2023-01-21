@@ -60,8 +60,8 @@ public class Interactable : MonoBehaviour
             case CharacterDialogue.Eyun:
                 return null;
             case CharacterDialogue.Karl:
-                string localName = "Test";
-                Monologue fine = new Monologue(localName, "That's pog");
+                string localName = "";
+                Monologue fine = new Monologue("Kleon", "That's pog");
                 Monologue notFine = new Monologue(localName, "That's sadge :(");
 
                 Choices c = new Choices(localName, "How are you doing my little pog champ?", ChoiceList(Choice("Fine", fine), Choice("Not fine", notFine)));
