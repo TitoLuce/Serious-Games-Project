@@ -393,9 +393,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You go home feeling exhausted.\n\xBFHow could Karl have been fired with
-    such ease, was that even allowed??!\n\nYou return the next day, only to encounter
-    a particularly bizarre scene.\n"
+  m_text: "Te vas a casa, exhausto.\n\xBFComo pueden haber despedido a Karl de esta
+    manera, esta eso permitido??!\n\nVuelves el dia siguiente, solo para encontrarte
+    con un escenario de lo mas bizarro.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51095fc591b4d9a4ea52a81306959848, type: 2}
   m_sharedMaterial: {fileID: 6068830851044703397, guid: 51095fc591b4d9a4ea52a81306959848, type: 2}
@@ -716,8 +716,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nMing is still looking helpless at what used to be Karl's working place
-    \n\nIvori is unconscious on the floor due to overexhaustion\n"
+  m_text: 'Ming sigue mirando al sitio de Karl con la mirada perdida.
+
+
+    Ivori
+    yace inconsciente en el suelo debido a haber estado trabajando toda la noche.
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51095fc591b4d9a4ea52a81306959848, type: 2}
   m_sharedMaterial: {fileID: 6068830851044703397, guid: 51095fc591b4d9a4ea52a81306959848, type: 2}

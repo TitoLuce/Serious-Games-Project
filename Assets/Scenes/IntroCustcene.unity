@@ -299,7 +299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038147, y: 0.000014305}
+  m_AnchoredPosition: {x: 92, y: 141.82}
   m_SizeDelta: {x: 1235, y: 283.6482}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701540921
@@ -322,7 +322,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You are an employee of the company Blue Bird, and on the first day of work...
+  m_text: "Eres Ey\xFAn Venlen, vas camino a tu trabajo en otro dia de tu mon\xF3tona
+    rutina, pero haber buscado tanto trabajo te hace apreciar este, no por la labor
+    como tal, despu\xE9s de todo eres un simple palomero,!!! sino por la compa\xF1\xEDa,
+    el ambiente en tu oficina es lo mejor, te da un poco de alegr\xEDa en tu dia."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51095fc591b4d9a4ea52a81306959848, type: 2}
   m_sharedMaterial: {fileID: 6068830851044703397, guid: 51095fc591b4d9a4ea52a81306959848, type: 2}
@@ -385,7 +388,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 190.41211, w: -183.84607}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
