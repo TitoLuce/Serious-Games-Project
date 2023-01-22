@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class ManagerOfScenes : MonoBehaviour
 {
-
     public float changeTime1;
     public string sceneName1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +16,10 @@ public class ManagerOfScenes : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        changeTime1 -= Time.deltaTime;
-        if (changeTime1 < 0)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName1);
-        }
+            changeTime1 -= Time.deltaTime;
+            if (changeTime1 < 0)
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName1);
+            }
     }
 }

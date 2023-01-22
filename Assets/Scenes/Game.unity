@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4682975693586729557, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
+      propertyPath: chosenDialogue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5001173713395093150, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -351,7 +355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &548602711
@@ -437,7 +441,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -399.562, w: -34.331646}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -528,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682975693586729557, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: chosenDialogue
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5001173713395093150, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: m_RootOrder
@@ -709,7 +713,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 9.671005, z: 99.59573, w: 10.275411}
+  m_margin: {x: 0, y: 9.671005, z: 50.65483, w: 10.275411}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -942,7 +946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 272.3, y: 50}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079131663
@@ -997,6 +1001,14 @@ PrefabInstance:
     - target: {fileID: -8297598382706008095, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3738778956497406104, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: -3738778956497406104, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 2875377886591546507, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: m_Name
@@ -1326,7 +1338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 273.64606}
+  m_AnchoredPosition: {x: 0, y: 186}
   m_SizeDelta: {x: 298.4878, y: 195.4707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361446257
@@ -1432,8 +1444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -174.97998}
-  m_SizeDelta: {x: 200, y: 100}
+  m_AnchoredPosition: {x: -1.1, y: -174.97998}
+  m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431977532
 MonoBehaviour:
@@ -1662,8 +1674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 65}
-  m_SizeDelta: {x: 100, y: 30}
+  m_AnchoredPosition: {x: -326.1, y: 65}
+  m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811253404
 MonoBehaviour:
@@ -1733,6 +1745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2047,9 +2060,17 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -3738778956497406104, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2875377886591546507, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875377886591546507, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
+      propertyPath: m_TagString
+      value: ImAChair
       objectReference: {fileID: 0}
     - target: {fileID: 3040946194707926162, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: m_Color.a
@@ -2069,7 +2090,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682975693586729557, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: type
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682975693586729557, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
+      propertyPath: workScene1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4682975693586729557, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
+      propertyPath: chosenDialogue
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5001173713395093150, guid: 75dd489101194b843b97eaf505b39c37, type: 3}
       propertyPath: m_RootOrder
@@ -2282,6 +2311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Protag
       objectReference: {fileID: 0}
+    - target: {fileID: 651602967585850178, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 800193586126022737, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6
@@ -2290,6 +2323,14 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 919076586}
+    - target: {fileID: 2468291684256135647, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
+      propertyPath: workScene
+      value: WorkCutscene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468291684256135647, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
+      propertyPath: chairtimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5496359579797606086, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2308,11 +2349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5496359579797606086, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 5496359579797606086, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.81
       objectReference: {fileID: 0}
     - target: {fileID: 5496359579797606086, guid: 562ba19ab212c914cb9290173597b7f2, type: 3}
       propertyPath: m_LocalPosition.z

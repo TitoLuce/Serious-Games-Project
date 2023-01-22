@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,6 +28,8 @@ public class DialogueManager : MonoBehaviour
 
     public Image characterImage;
     public Sprite[] images;
+
+    
 
     private void Start()
     {
@@ -239,7 +242,8 @@ public class DialogueManager : MonoBehaviour
     //    StartCoroutine(TypeSentence(sentence));
     //}
 
-
+    private string workSceneName = "WorkCutscene";
+    private string workSceneName2 = "Day2Cutscene";
 
     IEnumerator TypeSentence(string sentence)
     {
@@ -248,6 +252,14 @@ public class DialogueManager : MonoBehaviour
         {
             contentsText.text += letter;
             yield return new WaitForSeconds(0.03f);
+        }
+       if(sentence == "Ok")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(workSceneName);
+        }
+        if (sentence == "Ok2")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(workSceneName2);
         }
 
     }

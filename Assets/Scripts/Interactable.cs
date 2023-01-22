@@ -1,24 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using static Dialogue;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Interactable : MonoBehaviour
 {
-    public enum InteractionType { NONE, Talk, Start, Cutscene1 }
+    public enum InteractionType { NONE, Talk, Start, Cutscene1, Cutscene2}
     public InteractionType type;
     [HideInInspector] public Dialogue dialogue;
-    public GameObject sceneManag;
-    private SceneManaguer manager;
+
+
+
     public enum CharacterDialogue
     {
         Eyun,
         Karl1,
+        Karl2,
         Ivori1,
+        Ivori2,
         Ming1,
+        Ming2,
         Kleon1,
         Chair,
+        Exit,
     }
 
 
@@ -26,9 +32,9 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        manager = sceneManag.GetComponent<SceneManaguer>();
-
     }
+
+
 
     public void Interact()
     {
@@ -50,6 +56,9 @@ public class Interactable : MonoBehaviour
                 break;
             case InteractionType.Cutscene1:
                 FindObjectOfType<DialogueManager>().StartDialogue(Cutscene());
+                break;
+            case InteractionType.Cutscene2:
+                FindObjectOfType<DialogueManager>().StartDialogue(Cutscene2());
                 break;
             default:
                 break;
@@ -80,6 +89,14 @@ public class Interactable : MonoBehaviour
                 Monologue b = new Monologue(playerName, "¡Buenos días, come piedras!", cChoice);
                 Monologue a = new Monologue(localName, "¡Buenos días, abraza árboles!", b);
                 return a;
+            case CharacterDialogue.Karl2:
+                localName = "Karl";
+                playerName = "Eyun";
+
+                d = new Monologue(playerName, "Kaaaaaarl!!");
+                b = new Monologue(localName, "NOOOOOOOOOOOOOOOOOOOOOO", d);
+                a = new Monologue(localName, "Despues de todo lo que he hecho!!", b);
+                return a;
             case CharacterDialogue.Ivori1:
                 localName = "Ivori";
                 playerName = "Eyun";
@@ -106,8 +123,28 @@ public class Interactable : MonoBehaviour
                 b = new Monologue(playerName, " Buenos días señorita, ¿está mejor? Ayer parecía agotada.", cChoice);
                 a = new Monologue(localName, "Buenos días estimado compañero", b);
                 return a;
+            case CharacterDialogue.Ming2:
+                localName = "Ming";
+                playerName = "Eyun";
+
+                d = new Monologue(localName, "Desde que ha cambiado el director todo esta yendo a peor...");
+                b = new Monologue(playerName, "Que acaba de suceder?", d);
+                a = new Monologue(localName, "No... El buen Karl...", b);
+                return a;
+            case CharacterDialogue.Ivori2:
+                localName = "Ivori";
+                playerName = "Eyun";
+
+                a = new Monologue(localName, "No puedo hablar ahora mismo, hay demasiadas palomas mensajeras que atender!!");
+                return a;
             case CharacterDialogue.Kleon1:
-                return null;
+                localName = "Kleon";
+                playerName = "Eyun";
+
+                d = new Monologue(localName, "Karl se tendrá que ir de la empresa, alegraos los demas pues estareis a cargo de su parte.");
+                b = new Monologue(localName, "Me complace gratamente decirles que a partir de hoy...", d);
+                a = new Monologue(localName, "Buenas tardes queridos...trabajadores", b);
+                return a;
             case CharacterDialogue.Chair:
                 //localName = "Karl";
                 //playerName = "Eyun";
@@ -127,21 +164,22 @@ public class Interactable : MonoBehaviour
 
     private DialogueSection Cutscene()
     {
-
-        
-
         Monologue response1 = new Monologue("", "Ok");
         Monologue response2 = new Monologue("", "");
 
         Choices cChoice = new Choices("", "¿Deseas empezar tu jornada laboral?", ChoiceList(Choice("Si", response1), Choice("No", response2)));
 
-        
-        manager.startCutscene1 = true;
-        
+        return cChoice;
+    }
+
+    private DialogueSection Cutscene2()
+    {
+        Monologue response1 = new Monologue("", "Ok2");
+        Monologue response2 = new Monologue("", "");
+
+        Choices cChoice = new Choices("", "¿Deseas acabar tu jornada laboral?", ChoiceList(Choice("Si", response1), Choice("No", response2)));
 
         return cChoice;
-
-
     }
 
 
